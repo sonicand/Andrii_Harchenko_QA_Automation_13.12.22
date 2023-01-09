@@ -102,21 +102,26 @@ public class Homework6 {
             System.out.println("Entered Wrong data!");
             System.exit(0);
         }
-        int AvgFirstTeamScore = (T1P1FragCount + T1P2FragCount + T1P3FragCount + T1P4FragCount + T1P5FragCount) / 5;
-        int AvgSecondTeamScore = (T2P1FragCount + T2P2FragCount + T2P3FragCount + T2P4FragCount + T2P5FragCount) / 5;
+        double AvgFirstTeamScore = (double)(T1P1FragCount + T1P2FragCount + T1P3FragCount + T1P4FragCount + T1P5FragCount) / 5;
+        double AvgSecondTeamScore = (double)(T2P1FragCount + T2P2FragCount + T2P3FragCount + T2P4FragCount + T2P5FragCount) / 5;
         int FirstTeamScore = T1P1FragCount + T1P2FragCount + T1P3FragCount + T1P4FragCount + T1P5FragCount;
         int SecondTeamScore = T2P1FragCount + T2P2FragCount + T2P3FragCount + T2P4FragCount + T2P5FragCount;
-        String Winner = "empty";
-        int WinnerScore = 0;
+        String winner;
+        int winnerScore;
         if (FirstTeamScore > SecondTeamScore) {
-            Winner = FirstTeamName;
-            WinnerScore = FirstTeamScore;
+            winner = FirstTeamName;
+            winnerScore = FirstTeamScore;
+            System.out.println("Перемогла Команда " + winner + ", вона набрала " + winnerScore + " Очків");
         }
-            else {
-            Winner = SecondTeamName;
-            WinnerScore = SecondTeamScore;
+        else if (FirstTeamScore < SecondTeamScore) {
+            winner = SecondTeamName;
+            winnerScore = SecondTeamScore;
+            System.out.println("Перемогла Команда " + winner + ", вона набрала " + winnerScore + " Очків");
         }
-        System.out.println("Перемогла Команда " + Winner + ", вона набрала " + WinnerScore + " Очків");
+        else  {
+            winnerScore = FirstTeamScore;
+            System.out.println("Нічия" + ", обидві команди набрали " + winnerScore + " Очків");
+        }
         System.out.println("Середня кількість очків команди " + FirstTeamName + " Становить " + AvgFirstTeamScore);
         System.out.println("Середня кількість очків команди " + SecondTeamName + " Становить " + AvgSecondTeamScore);
     }
