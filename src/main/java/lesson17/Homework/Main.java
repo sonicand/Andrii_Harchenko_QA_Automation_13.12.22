@@ -33,10 +33,8 @@ public class Main {
         List<String> moreThanFive = productUtils.getMoreThanFive();
         System.out.println("Product names with price greater than 5: " + moreThanFive);
 
-        System.out.println();
-        System.out.println("Product names to String");
-        for (Product l : list) {
-            System.out.println(l.getProductName().toString());
-        }
+        List<String> PriceToString = productUtils.getAllPriceInStr();
+        System.out.println("Product prices in string: " + PriceToString);
+
     }
 }

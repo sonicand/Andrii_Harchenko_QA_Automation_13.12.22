@@ -49,5 +49,13 @@ public class ProductMarket {
         }
         return names;
     }
+
+    public List<String> getAllPriceInStr() {
+        List<String> names = new ArrayList<>();
+        for (Product p : productsList) {
+            names.add(String.valueOf(productsList.get(p.getPrice())));
+        }
+        return names;
+    }
 }
 
