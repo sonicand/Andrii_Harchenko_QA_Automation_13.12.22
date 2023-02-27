@@ -51,11 +51,11 @@ public class ProductMarket {
     }
 
     public List<String> getAllPriceInStr() {
-        List<String> names = new ArrayList<>();
-        for (Product p : productsList) {
-            names.add(String.valueOf(productsList.get(p.getPrice())));
+        List<String> allPricesInStr = new ArrayList<>();
+        for (Product prices : productsList) {
+            allPricesInStr.add(String.valueOf(prices.getPrice()));
         }
-        return names;
+        return allPricesInStr;
     }
 }
 
